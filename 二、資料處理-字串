@@ -1,0 +1,9 @@
+<?php
+$x = "人易科技:上 機 測 驗 - 演算法";
+$a = str_replace(":","：",$x);
+$b = str_replace(" ","",$a);
+$c = str_replace("-"," - ",$b);
+$d = substr($c,15,-11);
+echo $x;
+echo "\n";
+echo $d;
