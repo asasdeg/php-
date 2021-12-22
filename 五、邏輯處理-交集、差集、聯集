@@ -1,0 +1,32 @@
+<?php
+$a=array(775,5,22,13,55,974,796,1,0,9);
+$b=array(0,1,2,3,4,5,6,7,8,9);
+$c=array();
+$d=array();
+$e=array();
+$x=0;
+foreach($a as $valuea){
+  foreach($b as $valueb){
+        if($valuea==$valueb){
+            $c[]=$valuea;
+        }
+    }
+}
+foreach($a as $valuea){
+$x=0;
+  foreach($c as $valuec){
+        if($valuea==$valuec){
+            $x=1;
+        }
+    }
+    if($x==0){
+    $d[]=$valuea;
+    }
+}
+$e=$b;
+foreach($d as $value){
+    $e[]=$value;
+}
+print_r($c);
+print_r($d);
+print_r($e);
