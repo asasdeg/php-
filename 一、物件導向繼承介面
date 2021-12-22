@@ -1,0 +1,33 @@
+<?php
+interface action{
+    public function run();
+}
+class car implements action{
+    public $engine;
+    public $trunk;
+    public $wheel;
+    public $color;
+    public $operate;
+    function __construct($color){
+        $this->color=$color;
+        $this->engine=true;
+        $this->wheel=4;
+        $this->trunk=true;
+        $this->operate="steering wheel";
+    }
+    function run(){echo "踩油門";   }
+} 
+
+class scooter extends car implements action{
+    
+    function __construct($color){
+        $this->color=$color;
+        $this->engine=true;
+        $this->wheel=2;
+        $this->trunk=true;
+        $this->operate="steering handle";
+    }
+    function run(){echo "轉動油門";}
+}
+$car = new car("red");
+$scooter = new scooter("red");
