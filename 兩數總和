@@ -1,0 +1,16 @@
+<?php
+function twoSum($nums, $target) {
+        $ans = [];
+        foreach ($nums as $key1 => $val1) {
+            foreach ($nums as $key2 => $val2) {
+                if ($key1 == $key2) continue;
+                else if($target - $val1 == $val2) {
+                    $ans[] = $key1;
+                    $ans[] = $key2;
+                    break 2;
+                }
+            }
+        }
+        
+        return $ans;
+    }
